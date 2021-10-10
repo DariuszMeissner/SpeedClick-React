@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { TimeForm } from "./TimeForm";
+import { Time } from "./Time";
 import { Game } from "./Game";
+import { HeaderSmall } from "./HeaderSmall";
+
 
 export const Settings = () => {
   const [start, setStart] = useState(false);
@@ -15,5 +17,10 @@ export const Settings = () => {
     setValue(e.target.value);
   };
 
-  return start && value > 0 ? <Game time={value} onClick={handleTime} /> : <TimeForm onClick={handleTime} value={value} onChangeValue={handleChange} />;
+  return (
+    <>
+      <HeaderSmall/>
+      {start && value > 0 ? <Game time={value} onClick={handleTime} /> : <Time onClick={handleTime} value={value} onChangeValue={handleChange} />}
+    </>
+  );
 };

@@ -1,0 +1,21 @@
+.mainContainer {
+  height: 90vh;
+  padding: 2rem;
+}
+
+.intro {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20vh;
+  &__inc {
+    font-weight: 400;
+    text-align: center;
+  }
+  &__modal {
+    transition: 0.5s;
+    height: 100vh;
+    background-color: #000;
+  }
+}

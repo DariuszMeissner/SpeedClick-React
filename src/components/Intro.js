@@ -1,14 +1,30 @@
-import React from 'react'
-import { Button } from './Button'
+import React, { useState, useEffect } from "react";
+import { Button } from "./Button";
+import { HeaderSmall } from "./HeaderSmall";
+import { IntroModal } from "./IntroModal";
 
-export const Intro = ({onClick}) => {
+export const Intro = ({ onClick }) => {
+  const [modal, setModal] = useState(true);
 
-    return (
-      <div className='intro'>
-        <h1 className="intro__title" >Speed Click game</h1>
-        <p className='intro__slogan'>Challenge yourself with time</p>
-        <p className='intro__inc'>the game is about clicking a button within a certain time. When this is successful, the time is reset to the initial value - 50ms</p>
+  useEffect(() => {
+    setTimeout(() => {
+      setModal(false);
+    }, 2000);
+  }, []);
+
+  return modal ? (
+    <IntroModal />
+  ) : (
+    <>
+      <HeaderSmall />
+      <div style={{ backgroundColor: "#000" }} className="intro mainContainer">
+        <p className="intro__inc">The game is about clicking a button within a certain time.</p>
+        <p className="intro__inc">
+          When this is successful,
+          <br /> the time is reset to the initial value - 50ms
+        </p>
         <Button variant="btn btn-primary btn-lg" text="Start The Game" onClick={onClick} />
       </div>
-    );
-}
+    </>
+  );
+};

@@ -11,9 +11,9 @@ export const App = () => {
     setStart(prev => !prev);
   }
   return (
-    <div>
+    <>
       {(start) ? <Settings /> : <Intro onClick={handleOnClick}/>}
-    </div>
+    </>
   )
   
 
