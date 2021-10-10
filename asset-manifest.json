@@ -1,23 +1,20 @@
 {
   "files": {
     "main.css": "/SpeedClick-React/static/css/main.1e1b59e3.chunk.css",
-    "main.js": "/SpeedClick-React/static/js/main.119337e8.chunk.js",
-    "main.js.map": "/SpeedClick-React/static/js/main.119337e8.chunk.js.map",
+    "main.js": "/SpeedClick-React/static/js/main.9373dd5f.chunk.js",
+    "main.js.map": "/SpeedClick-React/static/js/main.9373dd5f.chunk.js.map",
     "runtime-main.js": "/SpeedClick-React/static/js/runtime-main.6cc99b1f.js",
     "runtime-main.js.map": "/SpeedClick-React/static/js/runtime-main.6cc99b1f.js.map",
-    "static/css/2.c1256375.chunk.css": "/SpeedClick-React/static/css/2.c1256375.chunk.css",
-    "static/js/2.df6b67fd.chunk.js": "/SpeedClick-React/static/js/2.df6b67fd.chunk.js",
-    "static/js/2.df6b67fd.chunk.js.map": "/SpeedClick-React/static/js/2.df6b67fd.chunk.js.map",
+    "static/js/2.44e66e82.chunk.js": "/SpeedClick-React/static/js/2.44e66e82.chunk.js",
+    "static/js/2.44e66e82.chunk.js.map": "/SpeedClick-React/static/js/2.44e66e82.chunk.js.map",
     "index.html": "/SpeedClick-React/index.html",
-    "static/css/2.c1256375.chunk.css.map": "/SpeedClick-React/static/css/2.c1256375.chunk.css.map",
     "static/css/main.1e1b59e3.chunk.css.map": "/SpeedClick-React/static/css/main.1e1b59e3.chunk.css.map",
-    "static/js/2.df6b67fd.chunk.js.LICENSE.txt": "/SpeedClick-React/static/js/2.df6b67fd.chunk.js.LICENSE.txt"
+    "static/js/2.44e66e82.chunk.js.LICENSE.txt": "/SpeedClick-React/static/js/2.44e66e82.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6cc99b1f.js",
-    "static/css/2.c1256375.chunk.css",
-    "static/js/2.df6b67fd.chunk.js",
+    "static/js/2.44e66e82.chunk.js",
     "static/css/main.1e1b59e3.chunk.css",
-    "static/js/main.119337e8.chunk.js"
+    "static/js/main.9373dd5f.chunk.js"
   ]
 }
