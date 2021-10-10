@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/DariuszMeissner/SpeedClick-React/static/css/main.1e1b59e3.chunk.css",
-    "main.js": "/DariuszMeissner/SpeedClick-React/static/js/main.ba1673b6.chunk.js",
-    "main.js.map": "/DariuszMeissner/SpeedClick-React/static/js/main.ba1673b6.chunk.js.map",
+    "main.js": "/DariuszMeissner/SpeedClick-React/static/js/main.119337e8.chunk.js",
+    "main.js.map": "/DariuszMeissner/SpeedClick-React/static/js/main.119337e8.chunk.js.map",
     "runtime-main.js": "/DariuszMeissner/SpeedClick-React/static/js/runtime-main.28514948.js",
     "runtime-main.js.map": "/DariuszMeissner/SpeedClick-React/static/js/runtime-main.28514948.js.map",
     "static/css/2.c1256375.chunk.css": "/DariuszMeissner/SpeedClick-React/static/css/2.c1256375.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.c1256375.chunk.css",
     "static/js/2.df6b67fd.chunk.js",
     "static/css/main.1e1b59e3.chunk.css",
-    "static/js/main.ba1673b6.chunk.js"
+    "static/js/main.119337e8.chunk.js"
   ]
 }
