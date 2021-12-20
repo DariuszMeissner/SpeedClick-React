@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Intro } from "./Intro";
+import { Intro } from "./intro/Intro";
 import { Settings } from "./Settings";
 
 

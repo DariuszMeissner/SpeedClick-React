@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "./Button";
+import { Button } from "./button/Button";
 
 export const Time = ({ onClick, onChangeValue, value }) => {
   const [disabled, setDisabled] = useState(true);

@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "./Button";
-import { GameInfoTable } from "./GameInfoTable";
+import { Button } from "../button/Button";
+import { GameInfoTable } from "../game/GameInfoTable";
 
 export const GameInfo = ({ onClick, timer, setNewGame, scores }) => {
   return (
