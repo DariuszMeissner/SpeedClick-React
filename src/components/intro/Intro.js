@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "./Button";
-import { HeaderSmall } from "./HeaderSmall";
+import { Button } from "../button/Button";
+import { HeaderSmall } from "../header/HeaderSmall";
 import { IntroModal } from "./IntroModal";
 
 export const Intro = ({ onClick }) => {

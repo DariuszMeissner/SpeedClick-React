@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./Button";
+import { Button } from "../button/Button";
 
 export const GameNav = ({ start, disabled, addPoint, handleStart }) => {
   return (

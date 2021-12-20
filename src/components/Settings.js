@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Time } from "./Time";
-import { Game } from "./Game";
-import { HeaderSmall } from "./HeaderSmall";
+import { Game } from "./game/Game";
+import { HeaderSmall } from "./header/HeaderSmall";
 
 
 export const Settings = () => {
@@ -19,7 +19,7 @@ export const Settings = () => {
 
   return (
     <>
-      <HeaderSmall/>
+      <HeaderSmall />
       {start && value > 0 ? <Game time={value} onClick={handleTime} /> : <Time onClick={handleTime} value={value} onChangeValue={handleChange} />}
     </>
   );

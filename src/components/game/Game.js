@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "./Button";
+import { Button } from "../button/Button";
 import { GameDisplay } from "./GameDisplay";
 import { GameInfo } from "./GameInfo";
 import { GameNav } from "./GameNav";
-import { PointsModal } from "./PointsModal";
+import { PointsModal } from "../PointsModal";
 
 export const Game = ({ time, onClick }) => {
   const [timer, setTimer] = useState(time);
