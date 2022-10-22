@@ -1,0 +1,27 @@
+.starting-time {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: up 500ms;
+  animation-fill-mode: forwards;
+  transition: transform 500ms;
+}
+
+.remaining-time {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: up 500ms;
+  animation-fill-mode: forwards;
+  transition: transform 500ms;
+}
+
+/* Animation definition */
+@keyframes up {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
