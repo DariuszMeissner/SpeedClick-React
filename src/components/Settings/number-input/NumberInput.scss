@@ -1,0 +1,42 @@
+.active-up {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50%);
+  opacity: 0;
+  animation: up 500ms;
+  animation-fill-mode: forwards;
+  transition: opacity 500ms;
+}
+
+.active-down {
+  position: relative;
+  z-index: 1;
+  transform: translateY(50%);
+  opacity: 0;
+  animation: down 500ms;
+  animation-fill-mode: forwards;
+  transition: opacity 500ms;
+}
+
+/* Animation definition */
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
