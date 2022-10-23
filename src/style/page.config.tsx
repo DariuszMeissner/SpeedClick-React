@@ -13,9 +13,6 @@ const PAGE_CONFIG = {
     justifyContent: 'center'
   },
   panel: {
-    background: 'black',
-    boxShadow: 'rgba(74 74 74 / 35%) 0px 5px 15px',
-    border: '1px solid gray',
     borderRadius: '10px',
     paddingTop: '8px',
     width: '250px',
@@ -24,11 +21,17 @@ const PAGE_CONFIG = {
     justifyContent: 'space-between'
   },
   heading: {
-    fontSize: '40px',
+    fontSize: '60px',
     marginBottom: '0'
   },
   hint: {
+    marginBottom: '0',
     fontSize: '12px'
+  },
+  colors: {
+    green: 'rgb(31 90 39)',
+    blue: 'rgb(23 37 102)',
+    gray: 'rgb(79 79 79)'
   }
 } as const
 

@@ -3,7 +3,8 @@ import TimerContext, { IDigits } from '../../../context/timerContext'
 import './NumberInput.scss'
 
 interface IProps {
-  style: React.CSSProperties
+  styleInput: React.CSSProperties
+  styleButton: React.CSSProperties
   name: string
   length: number
 }
@@ -13,15 +14,10 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center'
-  },
-  button: {
-    position: 'relative',
-    width: '100%',
-    zIndex: 10
   }
 } as const
 
-const NumberInput: FC<IProps> = ({ name, length, style }) => {
+const NumberInput: FC<IProps> = ({ name, length, styleInput, styleButton }) => {
   const { digits, updateDigits } = useContext(TimerContext)
   const [value, setValue] = useState<number>(1)
   const nameRef = useRef<string>('')
@@ -54,32 +50,29 @@ const NumberInput: FC<IProps> = ({ name, length, style }) => {
     return !/[0-9]/.test(e.key) && e.preventDefault()
   }
 
-  const onUpArrow = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const onClickArrow = (e: React.MouseEvent<HTMLButtonElement>) => {
     const targetName = (e.target as HTMLButtonElement).name
-
-    inputRef.current?.classList.toggle('active-up')
+    const targetTitle = (e.target as HTMLButtonElement).title
+    nameRef.current = targetName
     setActiveClass(true)
 
-    if (value >= 0 && value < 9) {
-      setValue((prev) => prev + 1)
-    } else {
-      setValue(0)
+    if (targetTitle === 'minus') {
+      inputRef.current?.classList.toggle('active-down')
+      if (value > 0 && value <= 9) {
+        setValue((prev) => prev - 1)
+      } else {
+        setValue(9)
+      }
     }
-    nameRef.current = targetName
-  }
 
-  const onDownArrow = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const targetName = (e.target as HTMLButtonElement).name
-
-    inputRef.current?.classList.toggle('active-down')
-    setActiveClass(true)
-
-    if (value > 0 && value <= 9) {
-      setValue((prev) => prev - 1)
-    } else {
-      setValue(9)
+    if (targetTitle === 'plus') {
+      inputRef.current?.classList.toggle('active-up')
+      if (value >= 0 && value < 9) {
+        setValue((prev) => prev + 1)
+      } else {
+        setValue(0)
+      }
     }
-    nameRef.current = targetName
   }
 
   return (
@@ -87,12 +80,13 @@ const NumberInput: FC<IProps> = ({ name, length, style }) => {
       <button
         name={name}
         type="button"
-        onClick={onDownArrow}
-        style={styles.button}>
+        onClick={onClickArrow}
+        style={styleButton}
+        title="minus">
         -
       </button>
       <input
-        style={style}
+        style={styleInput}
         value={value}
         name={name}
         type="text"
@@ -104,8 +98,9 @@ const NumberInput: FC<IProps> = ({ name, length, style }) => {
       <button
         name={name}
         type="button"
-        onClick={onUpArrow}
-        style={styles.button}>
+        onClick={onClickArrow}
+        style={styleButton}
+        title="plus">
         +
       </button>
     </div>

@@ -1,12 +1,20 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import React, { FC, useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import TimerContext from '../../context/timerContext'
 import Button from '../button/Button'
 import Modal from '../modal/Modal'
 import GameDisplay from './GameDisplay'
-import GameInfo from './GameInfo'
 import GameNav from './GameNav'
 import CONFIG from './game.config'
+
+const style = {
+  game: {
+    background: {
+      background: 'rgb(79 79 79)'
+    }
+  }
+}
 
 const Game: FC = () => {
   const [status, setStatus] = useState<string>(CONFIG.status.NEW_GAME)
@@ -63,25 +71,36 @@ const Game: FC = () => {
   }
 
   return (
-    <div>
+    <div style={style.game.background}>
       {status === CONFIG.status.ENDED && (
-        <Button
-          variant="btn btn-lg btn-success"
-          text="New game"
-          onClick={handleNewGame}
-        />
+        <div>
+          <Button
+            variant="btn btn-lg btn-success"
+            text="New game"
+            onClick={handleNewGame}
+          />
+
+          <Link to="/settings">
+            <Button variant="btn btn-lg btn-light" text="Change time" />
+          </Link>
+        </div>
       )}
-      <GameDisplay
-        points={points}
-        timeRemaining={timeRemaining}
-        startingTime={startingTime}
-      />
-      <GameNav
-        handleStart={handleStart}
-        handleAddPoint={handleAddPoint}
-        status={status}
-        points={points}
-      />
+
+      {!(status === CONFIG.status.ENDED) && (
+        <>
+          <GameDisplay
+            points={points}
+            timeRemaining={timeRemaining}
+            startingTime={startingTime}
+          />
+          <GameNav
+            handleStart={handleStart}
+            handleAddPoint={handleAddPoint}
+            status={status}
+            points={points}
+          />
+        </>
+      )}
 
       <Modal points={points} time={playTime} endGame={end} duration={3000} />
     </div>

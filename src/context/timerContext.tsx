@@ -15,7 +15,7 @@ export interface IDigits {
 }
 
 const TimerContext = createContext<ITimer>({
-  playTime: null,
+  playTime: 0,
   updatePlayTime: () => {},
   digits: {
     digit1: 1,

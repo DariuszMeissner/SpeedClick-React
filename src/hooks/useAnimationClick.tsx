@@ -6,16 +6,16 @@ const useAnimationClick = (
   element: React.MutableRefObject<HTMLElement | null>,
   points: number
 ) => {
-  function createParticle(x: number, y: number) {
+  const createParticle = (x: number, y: number) => {
     const particle = document.createElement('particle')
 
-    const size = Math.floor(Math.random() * 20 + 5)
+    const size = Math.floor(Math.random() * 30)
     particle.style.width = `${size}px`
     particle.style.height = `${size}px`
-    particle.style.background = `hsl(${Math.random() * 90 + 180}, 70%, 60%)`
+    particle.style.background = 'rgb(160 17 17)'
 
-    const destinationX = x + (Math.random() - 0.5) * 2 * 150
-    const destinationY = y + (Math.random() - 0.5) * 2 * 150
+    const destinationX = x + (Math.random() - 0.5) * 2 * 75
+    const destinationY = y + (Math.random() - 0.5) * 2 * 75
 
     const animation = particle.animate(
       [
@@ -43,7 +43,7 @@ const useAnimationClick = (
   }
 
   const onClick = (e: MouseEvent) => {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
       createParticle(e.clientX, e.clientY)
     }
   }

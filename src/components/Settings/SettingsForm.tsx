@@ -6,13 +6,26 @@ const style = {
     fontSize: '12px'
   },
   input: {
-    background: 'gray',
-    padding: 4,
-    width: '80%',
-    height: '80px',
+    width: '100%',
     fontSize: 30,
     color: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
+    background: 'gray',
+    padding: '18px 0',
+    border: '1px solid rgb(88 88 88)',
+    boxShadow:
+      'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset'
+  },
+  button: {
+    position: 'relative',
+    width: '100%',
+    zIndex: 10,
+    background: 'bgray',
+    color: 'black',
+    textShadow: '0px 0px 1px rgb(0 0 0)',
+    fontWeight: 800,
+    boxShadow:
+      'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset'
   },
   form: {
     display: 'flex',
@@ -26,10 +39,30 @@ const SettingsForm: FC = () => {
   return (
     <>
       <form style={style.form}>
-        <NumberInput style={style.input} name="digit1" length={MAX_LENGTH} />
-        <NumberInput style={style.input} name="digit2" length={MAX_LENGTH} />
-        <NumberInput style={style.input} name="digit3" length={MAX_LENGTH} />
-        <NumberInput style={style.input} name="digit4" length={MAX_LENGTH} />
+        <NumberInput
+          styleInput={style.input}
+          styleButton={style.button}
+          name="digit1"
+          length={MAX_LENGTH}
+        />
+        <NumberInput
+          styleInput={style.input}
+          styleButton={style.button}
+          name="digit2"
+          length={MAX_LENGTH}
+        />
+        <NumberInput
+          styleInput={style.input}
+          styleButton={style.button}
+          name="digit3"
+          length={MAX_LENGTH}
+        />
+        <NumberInput
+          styleInput={style.input}
+          styleButton={style.button}
+          name="digit4"
+          length={MAX_LENGTH}
+        />
       </form>
       <p style={style.hint}>minimum time: 1000ms,1000 = 1s</p>
     </>
