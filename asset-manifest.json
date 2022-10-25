@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SpeedClick-React/static/css/main.a81dbbe7.css",
-    "main.js": "/SpeedClick-React/static/js/main.618d0108.js",
+    "main.css": "/SpeedClick-React/static/css/main.5616232c.css",
+    "main.js": "/SpeedClick-React/static/js/main.632755f6.js",
     "static/js/787.28cb0dcd.chunk.js": "/SpeedClick-React/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/SpeedClick-React/index.html",
-    "main.a81dbbe7.css.map": "/SpeedClick-React/static/css/main.a81dbbe7.css.map",
-    "main.618d0108.js.map": "/SpeedClick-React/static/js/main.618d0108.js.map",
+    "main.5616232c.css.map": "/SpeedClick-React/static/css/main.5616232c.css.map",
+    "main.632755f6.js.map": "/SpeedClick-React/static/js/main.632755f6.js.map",
     "787.28cb0dcd.chunk.js.map": "/SpeedClick-React/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a81dbbe7.css",
-    "static/js/main.618d0108.js"
+    "static/css/main.5616232c.css",
+    "static/js/main.632755f6.js"
   ]
 }
