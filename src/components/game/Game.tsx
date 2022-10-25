@@ -7,6 +7,7 @@ import Modal from '../modal/Modal'
 import GameDisplay from './GameDisplay'
 import GameNav from './GameNav'
 import CONFIG from './game.config'
+import GameDisplayScore from './GameDisplayScore'
 
 const style = {
   game: {
@@ -24,6 +25,7 @@ const Game: FC = () => {
   const [timeRemaining, seTimeRemeining] = useState<number | null>(playTime)
   const [startingTime, setStartingTime] = useState<number | null>(playTime)
   const [points, setPoints] = useState<number>(0)
+  const [bestResult, setBestResult] = useState<number>(0)
 
   useEffect(() => {
     if (timeRemaining === 0) {
@@ -52,6 +54,10 @@ const Game: FC = () => {
     clearInterval(timerId)
     setStatus(CONFIG.status.ENDED)
     setEnd(true)
+
+    if (points > bestResult) {
+      setBestResult(points)
+    }
   }
 
   const handleAddPoint = () => {
@@ -83,11 +89,19 @@ const Game: FC = () => {
           <Link to="/settings">
             <Button variant="btn btn-lg btn-light" text="Change time" />
           </Link>
+
+          <Modal
+            points={points}
+            time={playTime}
+            endGame={end}
+            duration={3000}
+          />
         </div>
       )}
 
       {!(status === CONFIG.status.ENDED) && (
         <>
+          <GameDisplayScore bestResult={bestResult} />
           <GameDisplay
             points={points}
             timeRemaining={timeRemaining}
@@ -101,8 +115,6 @@ const Game: FC = () => {
           />
         </>
       )}
-
-      <Modal points={points} time={playTime} endGame={end} duration={3000} />
     </div>
   )
 }
