@@ -41,7 +41,7 @@ const HomeContainer: FC = () => {
           in={showIntro}
           nodeRef={nodeRef}
           timeout={300}
-          classNames="intro"
+          classNames="fade"
           unmountOnExit
           onEnter={() => setShowContent(false)}
           onExited={() => setShowContent(true)}>
@@ -54,7 +54,7 @@ const HomeContainer: FC = () => {
           in={showContent}
           nodeRef={nodeContentRef}
           timeout={300}
-          classNames="intro"
+          classNames="fade"
           unmountOnExit>
           {showContent && (
             <div ref={nodeContentRef}>

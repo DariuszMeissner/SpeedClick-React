@@ -2,50 +2,27 @@
 .intro {
   span {
     font-size: 50px;
-    font-weight: 600;
-    opacity: 0;
-    animation: pulseHeader 0.5s;
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-    animation-fill-mode: forwards;
   }
 
   p {
     font-size: 30px;
+  }
+
+  span,
+  p {
     opacity: 0;
-    animation: showDescrition 0.75s ease-in;
+    animation: text 0.75s ease-in;
     animation-fill-mode: forwards;
   }
   // delays
-  span:nth-child(1) {
-    animation-delay: 0s;
-  }
-  span:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  span:nth-child(3) {
-    animation-delay: 1s;
-  }
+  span,
   p {
-    animation-delay: 1.5s;
+    animation-delay: 0.2s;
   }
 }
 
 /* Animation definition */
-@keyframes pulseHeader {
-  0% {
-    font-size: 100vh;
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    font-size: 50px;
-    opacity: 1;
-  }
-}
-
-@keyframes showDescrition {
+@keyframes text {
   0% {
     opacity: 0;
   }
