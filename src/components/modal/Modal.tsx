@@ -32,15 +32,14 @@ const style = {
 } as const
 
 const Modal: FC<IProps> = ({ points, time, endGame, duration }) => {
-  const [openModal, setOpenModal] = useState<boolean>(true)
+  const [openModal, setOpenModal] = useState<boolean>(false)
 
   useEffect(() => {
-    if (openModal) {
-      setInterval(() => setOpenModal(false), duration)
-    } else {
-      setOpenModal(true)
-    }
-  }, [endGame])
+    setOpenModal(true)
+    const timeout = setTimeout(() => setOpenModal(false), duration)
+
+    return () => clearTimeout(timeout)
+  }, [])
 
   const achivement = () => {
     return (
