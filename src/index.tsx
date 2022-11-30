@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 // components takes precedence over default styles.
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import AppRoutes from './routes'
 import reportWebVitals from './reportWebVitals'
 import './index.scss'
@@ -11,9 +11,9 @@ import './index.scss'
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <Router>
+    <HashRouter basename="/">
       <AppRoutes />
-    </Router>
+    </HashRouter>
   </React.StrictMode>
 )
 
