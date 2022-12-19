@@ -1,6 +1,6 @@
 # SpeedClick Game version 2.0
 
-Second version with refreshed design and created by reat+typescript.
+Second version with refreshed design and created by react+typescript.
 
 <div>
 <img src="https://user-images.githubusercontent.com/59477908/208521981-f793c1de-e8be-4848-a8c4-69884b418afd.png" height="200">
